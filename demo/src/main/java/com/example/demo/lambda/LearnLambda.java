@@ -4,6 +4,7 @@ import com.example.demo.dto.TopTag;
 
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.List;
 
 public class LearnLambda {
@@ -29,6 +30,10 @@ public class LearnLambda {
         System.out.println(date);
         long time1 = new Date().getTime();
         System.out.println(time1);
+
+        {
+            HashMap<Object, Object> objectObjectHashMap = new HashMap<>();
+        }
 
     }
 }
