@@ -20,20 +20,29 @@ public class LearnLambda {
 
     public static void main(String[] args) {
 
-        Integer time = 1550905542;
+        Integer time = null;
 
 //        LocalDateTime localDateTime = LocalDateTime.ofInstant(Instant.ofEpochSecond(time), TimeZone.getDefault().toZoneId());
 //        System.out.println(localDateTime);
 //        long time1 = new Date().getTime();
 //        System.out.println(time1);
-        Date date = new Date(time * 1000L);
-        System.out.println(date);
-        long time1 = new Date().getTime();
-        System.out.println(time1);
+//        Date date = new Date(time * 1000L);
+//        System.out.println(date);
+//        long time1 = new Date().getTime();
+//        System.out.println(time1);
+//
+//        {
+//            HashMap<Object, Object> objectObjectHashMap = new HashMap<>();
+//        }
 
-        {
-            HashMap<Object, Object> objectObjectHashMap = new HashMap<>();
+        switch (time){
+            case 1:
+                System.out.println(1);
+            case 2:
+                System.out.println(2);
+            case 3:
+                System.out.println(3);
         }
-
+        System.out.println(time);
     }
 }
