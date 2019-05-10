@@ -11,6 +11,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.text.MessageFormat;
 
 @RestController
 @RequestMapping("demo/PersionBehavior")
@@ -32,13 +33,16 @@ public class PersionBehaviorController {
 
 
     public static void main(String[] args) {
-        String data = "xy6ee4243be09581d5df9e00ec3ee38ca5e107b050371cb2d8fba614f01e89e737d7369d8e16e60f3cde615ae5989b13b8b92c7cc8dfd0ef235e6f5ed0f3d41dc2160e600e87c142d39500a4aea4e9e3f955266f5cfe8f4aab8b97b3887185bc35651393865e99bbb1de5e66c0565d3ffe7d5676f139facf12c6f3a367bde7f702fa50ec62711cc0670d5dc942bfbb88198ff0fee0d3e579b8825f79ee6f30fd4fc6cd9fce98eb864ec98d931652f4812020160926";
+        String data = "xy3ffef405fcc5d04750e58ff8a5a6cf89162874111d85d42b8a1e6fc3d9fd5ef777f7bf5b63fd0d64a48aced4c0bb4417f6a713b0818f03652b48ccdc5c8081872236bb5513975f27e1420816bc5552ba922d4f14d5c7bc1251726ab0999820db0b422d7377f49200e796ee15d886615bc011ea71caacf734bf0308062cff5c83f7b7ed5856e34dd5c3ec3e463c4be59b227b3c2eb26729f8b53f7443e2888efaa0966693837da2045ddf6a5f630ace78ecc00f19f550c091f918d8f0f228b86020160926";
         data = AesEncryptionUtil.decrypt(data);
         System.out.println(data);
-        String  phone = "";
+        String  phone = "110101199807244750";
         String dbPhone = AesEncryptionUtil.encrypt(phone);
         System.out.println(dbPhone);
 //        UniteLoginDTO uniteLoginDTO = JSONObject.parseObject(data, UniteLoginDTO.class);
 //        System.out.println(uniteLoginDTO.toString());
+        String patten = "http://monetization.feifei.test/product-detail/{0}?source={1}&userId={2}";
+        String format = MessageFormat.format(patten, "000", "111", 1000000L);
+        System.out.println(format);
     }
 }
